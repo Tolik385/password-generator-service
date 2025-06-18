@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор паролей</h1>
+        
+        <div class="controls">
+            <label>
+                Длина: <input type="number" id="length" value="12" min="8" max="64">
+            </label>
+            
+            <label>
+                <input type="checkbox" id="symbols" checked> Спецсимволы
+            </label>
+            
+            <label>
+                <input type="checkbox" id="digits" checked> Цифры
+            </label>
+            
+            <button onclick="generatePassword()">Сгенерировать</button>
+        </div>
+        
+        <div class="result">
+            <input type="text" id="password" readonly>
+            <button onclick="copyPassword()">Копировать</button>
+            <div id="strength"></div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
